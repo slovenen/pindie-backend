@@ -1,12 +1,12 @@
 const allowedCors = [
     'http://localhost:3000',
-    'http://frontend-zhuravlevilya.nomoredomainswork.ru',
-    'https://frontend-zhuravlevilya.nomoredomainswork.ru'
+    'http://slovenen-pindie-frontend.nomorepartiesco.ru',
+    'https://slovenen-pindie-frontend.nomorepartiesco.ru'
 ];
 function cors(req, res, next) {
     const { origin } = req.headers;
 
-    if (allowedCors.includes(origin)) { // Если это наш друг
+    if (allowedCors.includes(origin)) { 
         res.header('Access-Control-Allow-Origin', origin);
     }
 
@@ -16,4 +16,4 @@ function cors(req, res, next) {
     next();
 }
 
-module.exports = cors; //base
+module.exports = cors;
